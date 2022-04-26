@@ -130,7 +130,6 @@ function add_additional_software {
     # Install some additional X11 software from the mid 90s era.
     #------------------------------------------------------------------------------ 
     sudo apt install -y \
-        xfig \
         xpdf \
 	nedit
 	   
