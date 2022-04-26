@@ -116,17 +116,24 @@ function set_motif_lookandfeel {
     cp ./resources/gtk/settings.ini ${HOME}/.config/gtk-3.0/
 }
 
+
+function set_qt_look
+{
+	# sudo apt install -y qt5-gtk2-platformtheme \ 
+	# gtk2
+	# echo "export QT_QPA_PLATFORMTHEME=cde" >> /etc/profile.d/qt5ct.sh
+	echo "export QT_STYLE_OVERRIDE=cde" >> ~/.profile
+}
+
 function add_additional_software {
     #------------------------------------------------------------------------------ 
     # Install some additional X11 software from the mid 90s era.
     #------------------------------------------------------------------------------ 
     sudo apt install -y \
         xfig \
-        xpdf
-
-    sudo apt install snapd
-    sudo snap install core
-    sudo snap install xv --edge --devmode
+        xpdf \
+	nedit
+	   
 }
 
 function print_info {
@@ -139,5 +146,6 @@ install_cde
 set_display_manager
 improve_fonts
 set_motif_lookandfeel
+set_qt_look
 add_additional_software
 print_info
