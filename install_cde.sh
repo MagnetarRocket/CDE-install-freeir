@@ -119,7 +119,8 @@ function set_motif_lookandfeel {
 
 function set_qt_look
 {
-	# sudo apt install -y qt5-gtk2-platformtheme \ 
+	sudo apt install -y qt5-style-plugin-motif
+	#qt5-gtk2-platformtheme \ 
 	# gtk2
 	# echo "export QT_QPA_PLATFORMTHEME=cde" >> /etc/profile.d/qt5ct.sh
 	echo "export QT_STYLE_OVERRIDE=cde" >> ~/.profile
