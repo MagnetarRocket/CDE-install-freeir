@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # References:
 #
@@ -60,8 +61,8 @@ function preprocess {
         tcl-dev \
         x11proto-fonts-dev \
         xbitmaps \
+	opensp \
         xfonts-{100,75}dpi{,-transcoded} \
-		opensp \
         xorg 
 }
 
@@ -71,14 +72,15 @@ function install_cde {
     # Compile and install CDE
     #------------------------------------------------------------------------------ 
     pushd /tmp
-	rm -rf cdesktopenv-code
+	sudo rm -rf cdesktopenv-code
 
     git clone https://git.code.sf.net/p/cdesktopenv/code cdesktopenv-code
     cd cdesktopenv-code/cde
 
     ./autogen.sh
     ./configure
-    make -j4
+    make -j8
+	sudo rm -rf /usr/dt
     sudo make install
 
     popd
@@ -110,7 +112,6 @@ function improve_fonts {
 #------------------------------------------------------------------------------ 
 function set_motif_lookandfeel {
     mkdir -p ${HOME}/.themes
-<<<<<<< Updated upstream
     tar -C ${HOME}/.themes/ zxvf ./resources/gtk/cdetheme1.3.tar.gz 
     ln -s ${HOME}/.themes/cdetheme1.3/cdetheme ${HOME}/.themes/cdetheme
     cp ./resources/gtk/settings.ini ${HOME}/.config/gtk-3.0/
