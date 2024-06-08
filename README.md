@@ -15,5 +15,5 @@ sudo locale-gen de_DE; sudo locale-gen es_ES; sudo locale-gen fr_FR; sudo locale
 ```
 
 ```sh
-apt-get -y install autoconf automake bison build-essential flex g++ git ksh libtool lib{xt,xmu,xft,xinerama,xpm,pam,motif,ssl,xaw7,x11,xss,tirpc,jpeg,freetype6,utempter}-dev m4 ncompress patch rpcbind tcl-dev x11proto-fonts-dev xbitmaps xfonts-{100,75}dpi{,-transcoded} xorg
+apt-get -y install autoconf automake bison build-essential flex g++ git ksh libtool lib{xt,xmu,xft,xinerama,xpm,pam,motif,ssl,xaw7,x11,xss,tirpc,jpeg,freetype6,utempter}-dev m4 ncompress patch rpcbind tcl-dev x11proto-fonts-dev xbitmaps xfonts-{100,75}dpi{,-transcoded} xorg opensp
 ```
