@@ -129,11 +129,11 @@ function set_qt_look
 
 function add_additional_software {
     #------------------------------------------------------------------------------ 
-    # Install some additional X11 software from the mid 90s era.
+    # Install some additional X11 software from the 90s era.
     #------------------------------------------------------------------------------ 
     sudo apt install -y \
         xpdf \
-	nedit
+	nedit ddd grace xmakemol
 	   
 }
 
